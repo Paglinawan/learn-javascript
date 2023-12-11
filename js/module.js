@@ -1,8 +1,3 @@
-import DefaultVal, {
-  publicVal as val,
-  publicFn as fn,
-} from "./module-child.js";
+import * as moduleChild from "./module-child.js";
 
-console.log(val);
-fn();
-console.log(DefaultVal);
+console.log(moduleChild);
