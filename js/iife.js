@@ -15,8 +15,10 @@ const module = (function () {
   };
 })();
 
-module.publicFn();
-module.publicFn();
-console.log(module.publicVal++);
-console.log(module.publicVal++);
-module.publicFn();
+const moduleParent = (function ({ publicFn: fn, publicVal: val }) {
+  fn();
+  fn();
+  console.log(val++);
+  console.log(val++);
+  fn();
+})(module);
