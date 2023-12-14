@@ -1,15 +1,15 @@
 const obj = { a: 0 };
 const handler = {
   set: function (target, prop, value, receiver) {
-    console.log(`[set]: ${prop}`);
-    target[prop] = value;
-
-    return true; // Proxy オブジェクトで setハンドラを使用している場合、set メソッド内で必ず true を返す必要がある
+    throw new Error("cannot add prop");
   },
 
   get: function (target, prop, receiver) {
-    console.log(`[get]: ${prop}`);
-    return target[prop];
+    if (target.hasOwnProperty(prop)) {
+      return target[prop];
+    } else {
+      return "-1";
+    }
   },
 
   delete: function (target, prop) {
@@ -18,7 +18,5 @@ const handler = {
   },
 };
 const pxy = new Proxy(obj, handler);
-pxy.a = 1; // set
-pxy.a; // get
-delete pxy.a; // delete
-console.log(obj);
+pxy.a = 1;
+console.log(pxy.b);
