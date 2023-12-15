@@ -1,3 +1,4 @@
+window.name = "Someone";
 const person = {
   name: "Miho",
   hello: function () {
@@ -5,4 +6,5 @@ const person = {
   },
 };
 
-person.hello();
+const ref = person.hello;
+ref();
