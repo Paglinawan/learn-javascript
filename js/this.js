@@ -2,9 +2,12 @@ window.name = "Someone";
 const person = {
   name: "Miho",
   hello: function () {
-    console.log("Hello " + this.name);
+    a();
   },
 };
 
-const ref = person.hello;
-ref();
+function a() {
+  console.log("Hello " + this.name);
+}
+
+person.hello();
