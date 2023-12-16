@@ -5,8 +5,7 @@ class C {
   }
 }
 
-const obj1 = new C(1, 2);
-console.log(obj1);
-// ▼▼▼　//
-const obj2 = Reflect.construct(C, [1, 2]);
-console.log(obj2);
+const obj = new C(1, 2);
+
+console.log("a" in obj);
+console.log(Reflect.has(obj, "a"));
