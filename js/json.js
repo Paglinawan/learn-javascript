@@ -1,5 +1,9 @@
 const obj = { a: 0, b: 1, c: 2 };
 
-const json = JSON.stringify(obj);
+function replacer(prop, value) {
+  if (value < 1) return;
+  return value;
+}
+
+const json = JSON.stringify(obj, replacer);
 console.log(json);
-console.log(typeof json);
