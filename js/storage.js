@@ -1,5 +1,8 @@
-localStorage.setItem("Apple", "りんご");
-localStorage.setItem("Orange", "オレンジ");
+const obj = { apple: "りんご" };
+const json = JSON.stringify(obj);
 
-const result = localStorage.getItem("Apple");
-console.log(result);
+localStorage.setItem("Fruits", json);
+
+const result = localStorage.getItem("Fruits");
+const obj2 = JSON.parse(result);
+console.log(obj2);
