@@ -6,10 +6,10 @@ const person = {
   },
 };
 
-person.hello();
+person.hello(); // this -> 呼び出し元オブジェクト
 
 function fn(ref) {
   ref();
-}
+} // this -> グローバルオブジェクト
 
 fn(person.hello);
