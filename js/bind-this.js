@@ -8,10 +8,10 @@ const person = {
 
 person.hello();
 
-const helloMiho = person.hello.bind(person);
+const helloJudy = person.hello.bind({ name: "Judy" });
 
 function fn(ref) {
   ref();
 }
 
-fn(helloMiho);
+fn(helloJudy);
