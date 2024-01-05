@@ -1,12 +1,10 @@
-let a = "Hello";
-let b = a;
-b = "Bye";
-console.log(a, b);
+// const a = "Hello";
+// a = "Bye";
+// console.log(a); // -> Error
 
-let c = {
+const b = {
   prop: "Hello",
 };
 
-let d = c;
-d.prop = "Bye";
-console.log(c, d);
+b.prop = "Bye";
+console.log(b);
