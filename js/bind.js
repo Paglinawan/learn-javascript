@@ -1,5 +1,7 @@
 function a() {
   console.log("Hello " + this.name);
 }
-const b = a.bind({ name: "Miho" });
+
+const miho = { name: "Miho" };
+const b = a.bind(miho);
 b();
