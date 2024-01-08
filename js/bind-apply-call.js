@@ -1,9 +1,3 @@
-function a(message1, message2) {
-  console.log("Hello " + this.name + message1 + message2);
-}
-
-const miho = { name: "Miho" };
-
-// a.bind(miho); // 実行されない
-a.apply(miho, [" How are you?", " How's your work?"]);
-// a.call(miho, " How are you?"); // 引数を設定できる
+const array = [1, 2, 3, 4, 5];
+const result = Math.max.apply(null, array);
+console.log(result);
