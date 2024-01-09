@@ -3,5 +3,9 @@ function Person(name, age) {
   this.age = age;
 }
 
+Person.prototype.hello = function () {
+  console.log("Hello " + this.name);
+};
+
 const Miho = new Person("Miho", 29);
-console.log(Miho);
+Miho.hello();
