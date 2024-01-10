@@ -1,13 +1,14 @@
 function Constructor(a, b) {
   this.a = a;
   this.b = b;
-  return {};
+  // return {};
 }
 
 Object.prototype.c = function () {};
 
 function newFn(C, ...args) {
-  console.log(args); // [1, 2]
+  const _this = Object.create(Constructor.prototype); // __proto__に格納される空のオブジェクト
+  console.log(_this);
 }
 
 const instance = newFn(Constructor, 1, 2);
