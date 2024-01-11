@@ -1,8 +1,10 @@
 function Constructor(a, b) {
   this.a = a;
   this.b = b;
-  return { a: 1 };
+  const result = new Object();
+  result.a = 1;
+  return result;
 }
 
 const instance = new Constructor(1, 2);
-console.log(instance instanceof Constructor); // false
+console.log(instance.__proto__ === Constructor.prototype); // false
