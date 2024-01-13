@@ -1,5 +1,5 @@
 class Person {
-  constructor(name) {
+  constructor(name, age) {
     this.name = name;
     this.age = age;
   }
@@ -8,7 +8,7 @@ class Person {
   }
 }
 // ↑ Syntax Sugar
-// function Person(name) {
+// function Person(name,age) {
 //   this.name = name;
 //   this.age = age;
 // }
