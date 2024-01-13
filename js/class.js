@@ -15,6 +15,7 @@ class Japanese extends Person {
   }
 
   hello() {
+    super.hello(); // from Person Class -> "Hello Miho"
     console.log("こんにちは " + this.name + "（" + this.gender + "）");
   }
 }
