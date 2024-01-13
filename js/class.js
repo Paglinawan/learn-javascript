@@ -7,5 +7,8 @@ class Person {
     console.log("Hello " + this.name);
   }
 }
-const Miho = new Person("Miho", 29);
+
+class Japanese extends Person {}
+
+const Miho = new Japanese("Miho", 29);
 Miho.hello();
