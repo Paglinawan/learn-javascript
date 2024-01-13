@@ -8,7 +8,16 @@ class Person {
   }
 }
 
-class Japanese extends Person {}
+class Japanese extends Person {
+  constructor(name, age, gender) {
+    super(name, age);
+    this.gender = gender;
+  }
 
-const Miho = new Japanese("Miho", 29);
+  hello() {
+    console.log("こんにちは " + this.name + "（" + this.gender + "）");
+  }
+}
+
+const Miho = new Japanese("Miho", 29, "女性");
 Miho.hello();
