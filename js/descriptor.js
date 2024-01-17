@@ -1,7 +1,9 @@
+"use strict";
 const obj = {};
 Object.defineProperty(obj, "prop", {
   value: 0,
+  writable: true,
 });
 
-const descriptor = Object.getOwnPropertyDescriptor(obj, "prop");
-console.log(descriptor);
+obj.prop = 1;
+console.log(obj.prop);
