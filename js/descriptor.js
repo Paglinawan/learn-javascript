@@ -2,8 +2,8 @@
 const obj = {};
 Object.defineProperty(obj, "prop", {
   value: 0,
-  writable: true,
+  configurable: true,
 });
 
-obj.prop = 1;
+delete obj.prop;
 console.log(obj.prop);
