@@ -9,7 +9,11 @@ class Person {
   set name(val) {
     this._name = val;
   }
+  static bye() {
+    console.log("Bye");
+  }
 }
 
 const miho = new Person("Miho", 29);
 console.log(miho.name);
+console.log(miho);
