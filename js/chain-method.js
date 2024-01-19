@@ -18,3 +18,5 @@ class Person {
 const miho = new Person("Miho", 29);
 const judy = new Person("Judy", 36);
 miho.hello(judy);
+miho.shakeHands(judy);
+miho.bye(judy);
