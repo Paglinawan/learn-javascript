@@ -7,5 +7,7 @@ const obj = {
 Object.prototype.method = function () {};
 
 for (let key in obj) {
-  console.log(key, obj[key]);
+  if (obj.hasOwnProperty(key)) {
+    console.log(key, obj[key]);
+  }
 }
