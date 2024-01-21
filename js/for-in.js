@@ -4,6 +4,10 @@ const obj = {
   prop3: "value3",
 };
 
+Object.defineProperty(obj, "prop1", {
+  enumerable: false,
+});
+
 for (let key in obj) {
   console.log(key, obj[key]);
 }
