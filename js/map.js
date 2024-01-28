@@ -14,5 +14,6 @@ map.set(primitive, "SamplePrimitive");
 // console.log(map.get(5)); //  値に置き換えても取得できる
 // console.log(map.get(primitive));
 
-map.delete(method);
-console.log(map);
+for (const [key, value] of map) {
+  console.log(key, value);
+}
