@@ -9,5 +9,6 @@ set.add(method);
 //   console.log(key);
 // }
 
-const array = Array.from(set);
+// const array = Array.from(set);
+const array = [...set];
 console.log(array);
