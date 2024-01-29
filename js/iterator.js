@@ -29,6 +29,9 @@ const obj = {
   [Symbol.iterator]: genIterator.bind(null, 20),
 };
 
-for (const iterator of obj) {
-  console.log(iterator);
-}
+// for (const iterator of obj) {
+//   console.log(iterator);
+// }
+
+const s = new Set(obj);
+console.log(s);
