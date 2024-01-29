@@ -3,16 +3,24 @@ function genIterator(max) {
 
   return {
     next: function () {
-      return {
-        done: false,
-        value: i++,
-      };
+      if (i > max) {
+        return {
+          done: true,
+        };
+      } else {
+        return {
+          done: false,
+          value: i++,
+        };
+      }
     },
   };
 }
 
-const result = genIterator();
+const result = genIterator(10);
 
-console.log(result.next());
-console.log(result.next());
-console.log(result.next());
+let sample = result.next();
+while (!sample.done) {
+  console.log(sample.value);
+  sample = result.next();
+}
