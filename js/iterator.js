@@ -1,4 +1,4 @@
-function genIterator(max) {
+function genIterator(max = 10) {
   let i = 0;
 
   return {
@@ -19,8 +19,16 @@ function genIterator(max) {
 
 const result = genIterator(10);
 
-let sample = result.next();
-while (!sample.done) {
-  console.log(sample.value);
-  sample = result.next();
+// let sample = result.next();
+// while (!sample.done) {
+//   console.log(sample.value);
+//   sample = result.next();
+// }
+
+const obj = {
+  [Symbol.iterator]: genIterator,
+};
+
+for (const iterator of obj) {
+  console.log(iterator);
 }
