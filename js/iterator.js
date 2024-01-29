@@ -26,7 +26,7 @@ const result = genIterator(10);
 // }
 
 const obj = {
-  [Symbol.iterator]: genIterator,
+  [Symbol.iterator]: genIterator.bind(null, 20),
 };
 
 for (const iterator of obj) {
