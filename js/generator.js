@@ -1,7 +1,9 @@
-function* numbers() {
-  yield 1;
-  yield 2;
-  return 3;
+function* numbers(max = 3) {
+  let i = 0;
+  while (i < max) {
+    yield i++;
+  }
+  return;
 }
 
 const result = numbers();
