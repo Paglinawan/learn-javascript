@@ -6,9 +6,6 @@ function* numbers(max = 3) {
   return;
 }
 
-const result = numbers();
-
-console.log(result.next());
-console.log(result.next());
-console.log(result.next());
-console.log(result.next());
+for (const iterator of numbers()) {
+  console.log(iterator);
+}
