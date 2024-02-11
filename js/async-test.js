@@ -9,4 +9,6 @@ btn.addEventListener("click", function () {
   console.log("Button Clicked");
 });
 
-sleep(3000);
+setTimeout(function () {
+  sleep(3000);
+}, 2000);
