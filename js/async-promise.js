@@ -1,4 +1,4 @@
-new Promise(function (resolve) {
+new Promise(function (resolve, reject) {
   console.log("Promise");
   resolve(0);
 })
@@ -8,10 +8,14 @@ new Promise(function (resolve) {
   })
   .then(function (num) {
     console.log(`then: ${num++}`);
+    throw new Error();
     return num;
   })
   .then(function (num) {
     console.log(`then: ${num++}`);
+  })
+  .catch(function () {
+    console.log("Catch");
   });
 
 console.log("Global End");
