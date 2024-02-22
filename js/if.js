@@ -21,6 +21,8 @@ const emails = [
   "haveaniceday@example.net",
 ];
 emails.forEach((email) => {
-  const loc = email.indexOf("@");
-  console.log(email.slice(0, loc));
+  // const loc = email.indexOf("@");
+  // console.log(email.slice(0, loc));
+  const items = email.split("@");
+  console.log(items[0]);
 });
