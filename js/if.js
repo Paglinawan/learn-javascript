@@ -14,3 +14,13 @@ colors.forEach((color) => {
     console.log("ell -> " + color);
   }
 });
+
+const emails = [
+  "howareyou@example.com",
+  "iamfine@example.co.jp",
+  "haveaniceday@example.net",
+];
+emails.forEach((email) => {
+  const loc = email.indexOf("@");
+  console.log(email.slice(0, loc));
+});
