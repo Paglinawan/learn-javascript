@@ -26,3 +26,11 @@ emails.forEach((email) => {
   const items = email.split("@");
   console.log(items[0]);
 });
+
+const reviews = [3, 5, 4, 2, 4];
+reviews.forEach((review) => {
+  for (let i = 0; i < review; i++) {
+    const result = "*".repeat(review);
+    console.log(result);
+  }
+});
