@@ -1,4 +1,8 @@
 class Person {
+  // フィールド（プロパティの一覧）
+  name;
+  age;
+
   constructor(name, age) {
     this.name = name;
     this.age = age;
