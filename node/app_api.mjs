@@ -12,26 +12,26 @@ const scores = [
   { name: "Ysha", score: 62 },
 ];
 
-app.get("/exam", function (req, res) {
+app.get("/scores", function (req, res) {
   res.json(scores);
 });
 
-app.post("/add-score", function (req, res) {
+app.post("/scores", function (req, res) {
   const result = req.body;
   scores.push(result);
   console.log(scores);
   res.json(result);
 });
 
-app.post("/delete-score", function (req, res) {
-  const deleteId = req.body.id;
+app.delete("/scores/:id", function (req, res) {
+  const deleteId = req.params.id;
   scores.splice(deleteId, 1);
   console.log(scores);
   res.json({ deleteId });
 });
 
-app.post("/update-score", function (req, res) {
-  const targetScore = scores[req.body.id];
+app.patch("/scores/:id", function (req, res) {
+  const targetScore = scores[req.params.id];
   if (req.body.hasOwnProperty("name")) {
     targetScore.name = req.body.name;
   }
