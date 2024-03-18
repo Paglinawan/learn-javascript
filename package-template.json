@@ -1,0 +1,16 @@
+{
+  "name": "package ID",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "homepage": "",
+  "repository": "",
+  "icon": "",
+  "license": "Paglinawan",
+  "main": "index.js",
+  "author": "miho",
+  "contributors": [],
+  "scripts": {
+    "test": ""
+  }
+}
