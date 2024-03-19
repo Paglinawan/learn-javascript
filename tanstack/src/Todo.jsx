@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 
 const fetchTodos = async () => {
-  const res = await fetch("http://localhost:5173/todos");
+  const res = await fetch("http://localhost:3000/todos");
   return res.json();
 };
 
